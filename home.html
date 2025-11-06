@@ -3,32 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard | Soumyasree App</title>
+  <title>Gattu Soumyasree | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; background: #fafafa; text-align: center; padding-top: 5rem; }
-    h1 { color: #6c63ff; margin-bottom: 1rem; }
-    button { background: #6c63ff; color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 5px; cursor: pointer; }
-    button:hover { background: #574bff; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #fafafa; color: #333; }
+    header { text-align: center; padding: 3rem 1rem; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
+    header h1 { font-size: 2rem; color: #333; }
+    header h2 { font-size: 1.2rem; color: #777; margin-bottom: 1rem; }
+    header a.button { background: #6c63ff; color: #fff; padding: 0.6rem 1.2rem; border-radius: 30px; text-decoration: none; }
+    section { max-width: 900px; margin: 3rem auto; padding: 0 1rem; }
+    h3 { color: #6c63ff; margin-bottom: 1rem; border-bottom: 2px solid #eee; display: inline-block; }
+    ul { list-style: none; margin-left: 1rem; }
+    li { margin-bottom: 0.5rem; }
+    .projects a { color: #6c63ff; text-decoration: none; }
+    .contact a { color: #6c63ff; text-decoration: none; margin: 0 0.5rem; }
+    footer { text-align: center; padding: 2rem; background: #f0f0f0; margin-top: 3rem; }
   </style>
 </head>
 <body>
-  <h1 id="welcomeMessage"></h1>
-  <button id="logoutBtn">Logout</button>
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Soumyasree Profile Picture" />
+    <h1>Gattu Soumyasree</h1>
+    <h2>Computer Science Student | Aspiring Software Developer</h2>
+    <a class="button" href="soumyasree_resume.pdf" download>Download Resume</a>
+  </header>
 
-  <script>
-    const username = localStorage.getItem('loggedInUser');
-    if (!username) {
-      alert('Please login first!');
-      window.location.href = 'login.html';
-    } else {
-      document.getElementById('welcomeMessage').innerText = `Welcome, ${username}! 🎉`;
-    }
+  <section>
+    <h3>Education</h3>
+    <ul>
+      <li><strong>B.Tech in Computer Science & Engineering</strong>, BVRIT Hyderabad College of Engineering for Women (2022–2026) — CGPA: 9.27</li>
+      <li><strong>Intermediate</strong>, Sri Aakash Junior College (2020–2022) — 98.2%</li>
+      <li><strong>SSC</strong>, Sri Aurobindo High School (2019–2020) — CGPA: 10.0</li>
+    </ul>
+  </section>
 
-    document.getElementById('logoutBtn').addEventListener('click', () => {
-      localStorage.removeItem('loggedInUser');
-      alert('Logged out successfully!');
-      window.location.href = 'login.html';
-    });
-  </script>
+  <section class="projects">
+    <h3>Projects</h3>
+    <ul>
+      <li><strong>Copyright Protection of ASI Heritage Images</strong> — Secure watermarking using DWT & SVD. <a href="https://github.com/GattuSoumyasree/Copyright-Protection-of-ASI-Heritage-Images-for-Secure-Digital-Preservation">GitHub</a></li>
+      <li><strong>Choco Factory – E-Commerce Website</strong> — HTML, CSS, JS, Java Servlets, JDBC. <a href="https://github.com/GattuSoumyasree/Choco_Factory">GitHub</a></li>
+      <li><strong>Scientific Calculator</strong> — Python GUI-based calculator. <a href="https://github.com/GattuSoumyasree/Scientific_Calculator">GitHub</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Skills</h3>
+    <ul>
+      <li>Programming: Java, Python, C</li>
+      <li>Frontend: HTML, CSS</li>
+      <li>Backend/Database: SQL</li>
+      <li>Coursework: DS, Algorithms, OOPs, DBMS, OS</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Certifications & Courses</h3>
+    <ul>
+      <li>The Joy of Computing Using Python – NPTEL</li>
+      <li>Data Analytics with Python – NPTEL</li>
+      <li>DBMS – NPTEL</li>
+      <li>Cybersecurity Fundamentals – IBM</li>
+      <li>SQL (Basic) – HackerRank</li>
+      <li>Java Full Stack Development – Smart Mieten Internship</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Achievements</h3>
+    <ul>
+      <li>Team Lead – Copyright Protection Project</li>
+      <li>College & CSE Department Topper (III Year – I Sem, CGPA: 9.5)</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:soumyasreegattu@gmail.com">soumyasreegattu@gmail.com</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/soumyasree-gattu-019324259/">LinkedIn</a> |
+      <a href="https://github.com/GattuSoumyasree">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Gattu Soumyasree. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
