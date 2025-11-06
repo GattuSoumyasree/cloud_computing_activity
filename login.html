@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Soumyasree App</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #fafafa; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+    form { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); width: 300px; }
+    h2 { text-align: center; color: #6c63ff; margin-bottom: 1rem; }
+    input { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
+    button { width: 100%; background: #6c63ff; color: white; border: none; padding: 0.7rem; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #574bff; }
+    a { text-decoration: none; color: #6c63ff; display: block; text-align: center; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter username" required />
+    <input type="password" id="password" placeholder="Enter password" required />
+    <button type="submit">Login</button>
+    <a href="register.html">Create a new account</a>
+  </form>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const storedPassword = localStorage.getItem(username);
+      if (storedPassword === password) {
+        localStorage.setItem('loggedInUser', username);
+        alert('Login successful!');
+        window.location.href = 'home.html';
+      } else {
+        alert('Invalid username or password!');
+      }
+    });
+  </script>
+</body>
+</html>
